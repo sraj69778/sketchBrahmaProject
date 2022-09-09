@@ -1,0 +1,25 @@
+.rowDiv{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.paginationClass{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.searchUpperDiv{
+    margin-left: 250px;
+   
+}
+
+.searchImageInput{
+    margin-top: 30px;
+
+}
+.searchImage{
+    height: 40px;
+    margin-top: 30px;
+
+}

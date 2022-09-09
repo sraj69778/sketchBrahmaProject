@@ -1,0 +1,22 @@
+.movieSelect {
+    align-self: center;
+    display: inline-block;
+    /* margin: 0 auto; */
+    margin: auto;
+    /* max-width: 985px; */
+    width: 100%;
+    /* text-align: center; */
+    margin-left: 400px;
+    margin-top: 200px;
+}
+
+span{
+    margin-right: 95px;
+}
+.imageClass{
+    max-width: 620px;
+}
+.imgClass{
+    width: 65px; 
+    float: left;
+}

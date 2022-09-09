@@ -1,0 +1,31 @@
+<div *ngIf="moviePage">
+    <div class="input-group searchUpperDiv" *ngIf="routesActive">
+        <div id="search-autocomplete " class="form-outline" style="width: 70%;">
+          <input type="search" id="form1" class="form-control searchImageInput" [(ngModel)]="searchElement" placeholder="Search movies">
+        </div>
+        <div>
+          <img src="../assets/search.png" class="searchImage" alt="" (click)="onClickSearchButton( searchElement)">
+        </div>
+    </div>
+
+    <div class="rowDiv" *ngIf="moviePage">
+
+        <div class="row">
+            <div class="card col-3" *ngFor="let data of results | paginate: { itemsPerPage: 20, currentPage: p }">
+                <img class="card-img-top" [src]="imgUrlHost+data.backdrop_path" alt="Card image cap"
+                    (click)="onImageClick(data.id)">
+                <div class="card-body">
+                    <p class="card-text">{{data.original_title}}</p>
+                    <p class="card-text"><span> <img style="width:15px;" src="../../../../assets/star.png"
+                                alt=""></span>
+                        {{data.vote_average}} / 10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="paginationClass">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>
+
+<router-outlet *ngIf="!moviePage"></router-outlet>

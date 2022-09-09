@@ -1,0 +1,27 @@
+<div class="movieSelect">
+    <div>
+        <div class="row">
+            <img class="imgClass" src="../../../assets/left-arrow.png" alt="" (click)="onClickArrow()">
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h1>
+                    {{movieDetails.original_title}}
+                </h1>
+                <p style="margin-top: 20px;">
+                    {{movieDetails.overview}}
+                </p>
+                <p>
+                    <span> Release Date </span> {{movieDetails.release_date}}
+                </p>
+                <p>
+                    <span> Original Language </span> {{movieDetails.original_language}}
+                </p>
+            </div>
+            <div class="col-3">
+                <img class="imageClass" [src]="imgUrlHost+movieDetails.backdrop_path" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+
+</div>
